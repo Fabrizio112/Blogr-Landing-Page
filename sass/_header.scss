@@ -1,0 +1,138 @@
+header {
+    @include tamanio(100%, 80vh);
+    @include flex(column, initial, center);
+    background-image: url(../imagenes/bg-pattern-intro-desktop.svg);
+    background-size: 110rem;
+    background-position-x: 200px;
+    background-repeat: no-repeat;
+    background-position-y: -600px;
+    background-color: #ff545d;
+    color: white;
+    border-bottom-left-radius: 6rem;
+    text-align: center;
+
+    nav {
+        @include tamanio(90%, 20vh);
+        @include flex(row, space-between, center);
+
+        #nav-left {
+            @include tamanio(15%, 100%);
+            @include flex(row, space-between, center);
+
+        }
+
+        #nav-right {
+            @include tamanio(85%, 100%);
+
+            @include flex(row, end, center);
+
+            #nav-right-first {
+                @include tamanio(40%, 100%);
+                @include flex(row, space-between, center);
+
+                div {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: $tamanio-nav-footer;
+                    }
+
+                    select {
+                        border: none;
+                        background-color: transparent;
+                        color: white;
+                        width: 2rem;
+
+                        option {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            #nav-right-second {
+                @include tamanio(60%, 100%);
+                @include flex(row, end, center);
+                gap: 3rem;
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                li {
+                    font-size: $tamanio-nav-footer;
+                }
+            }
+
+            #sign-up {
+                @include boton(white, #ff545d);
+
+                li {
+                    color: #ff545d;
+                    ;
+                }
+            }
+
+            #sign-up:hover {
+                @include boton(#ff7b86, white);
+
+                li {
+                    color: white;
+                }
+
+                transition: 0.4s all cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+        }
+
+        #barra-menu {
+            display: none;
+        }
+
+        #barra-cerrar {
+            display: none;
+        }
+    }
+
+    #header-main-text {
+        @include tamanio(70%, 80%);
+        @include flex(column, start, center);
+        gap: 1rem;
+        margin-top: 3rem;
+
+        h1 {
+            font-size: $titulo-principal;
+        }
+
+        span {
+            font-size: 1.5rem;
+        }
+
+        #header-buttons {
+            margin-top: 2rem;
+
+            button {
+                border: none;
+                font-size: $tamanio-nav-footer;
+                @include boton(white, #ff545d);
+            }
+
+            button:hover {
+                @include boton(#ff7b86, white);
+                transition: 0.4s all cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+
+            #learn {
+                @include boton(#ff545d, white);
+                border: 1px solid white;
+                margin-left: 2rem;
+            }
+
+            #learn:hover {
+                @include boton(white, #ff545d);
+                transition: 0.4s all cubic-bezier(0.215, 0.610, 0.355, 1);
+            }
+        }
+    }
+}

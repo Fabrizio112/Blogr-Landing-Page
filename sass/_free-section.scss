@@ -1,0 +1,42 @@
+#free-section {
+    @include tamanio(100%, 150vh);
+    @include flex(row, center, center);
+
+    #free-section-left {
+        @include tamanio(50%, 100%);
+        @include flex(column, center, center);
+
+        img {
+            width: 1000px;
+            height: 800px;
+            position: relative;
+            overflow: hidden;
+            right: 8rem;
+        }
+    }
+
+    #free-section-right {
+        @include tamanio(50%, 50%);
+        @include flex(column, center, center);
+        gap: 6rem;
+
+        div {
+            @include tamanio(78%, 50%);
+            @include flex(column, center, start);
+            gap: 2rem;
+
+            h5 {
+                font-size: $subtitulo-secciones;
+            }
+
+            p {
+                font-size: $tamanio-parrafo;
+                line-height: $tamanio-line-height;
+            }
+        }
+
+        #powerful {
+            justify-content: start;
+        }
+    }
+}

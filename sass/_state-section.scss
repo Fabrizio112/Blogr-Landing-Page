@@ -1,0 +1,38 @@
+#state-section {
+    @include tamanio(100%, 60vh);
+    @include flex(row, center, center);
+    background-color: #3b3e5d;
+    background-image: url(../imagenes/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position-x: -205px;
+    background-position-y: -500px;
+    background-size: 60rem;
+    border-top-right-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    color: white;
+
+    #state-section-left {
+        @include tamanio(50%, 100%);
+        @include flex(row, center, center);
+    }
+
+    #state-section-right {
+        @include tamanio(50%, 100%);
+        @include flex(column, center, start);
+
+        div {
+            @include tamanio(77%, 100%);
+            @include flex(column, center, start);
+            gap: 2rem;
+
+            h4 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: $tamanio-parrafo;
+                line-height: $tamanio-line-height;
+            }
+        }
+    }
+}

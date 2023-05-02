@@ -1,0 +1,50 @@
+#designed-section {
+    @include tamanio(100%, 140vh);
+    @include flex(column, center, center);
+
+    h2 {
+        @include tamanio(100%, 20%);
+        @include flex(row, center, end);
+        font-size: $titulo-secciones;
+    }
+
+    #container-sections {
+        @include tamanio(100%, 80%);
+        @include flex(row, space-between, center);
+
+        #designed-section-left {
+            @include tamanio(50%, 100%);
+            @include flex(column, center, center);
+
+            div {
+                @include tamanio(78%, 50%);
+                @include flex(column, center, start);
+                gap: 2rem;
+
+                h3 {
+                    font-size: $subtitulo-secciones;
+                }
+
+                p {
+                    font-size: $tamanio-parrafo;
+                    line-height: $tamanio-line-height;
+                }
+            }
+
+            #robust {
+                justify-content: start;
+            }
+        }
+
+        #designed-section-right {
+            @include tamanio(50%, 100%);
+
+            @include flex(row, center, center);
+            background-image: url(../imagenes/illustration-editor-desktop.svg);
+            background-repeat: no-repeat;
+            background-position-x: 100px;
+            background-position-y: -100px;
+            background-size: 50rem;
+        }
+    }
+}

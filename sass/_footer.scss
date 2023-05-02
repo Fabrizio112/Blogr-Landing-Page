@@ -1,0 +1,53 @@
+footer {
+    @include tamanio(100%, 50vh);
+    background-color: #24242c;
+    color: white;
+    @include flex(row, space-around, center);
+    border-top-right-radius: 6rem;
+
+    #footer-left {
+        @include tamanio(35%, 100%);
+        @include flex(row, center, start);
+
+        img {
+            margin-top: 4rem;
+        }
+    }
+
+    #footer-rigth {
+        @include tamanio(65%, 100%);
+
+        div {
+            @include tamanio(100%, 90%);
+            @include flex(row, space-between, baseline);
+
+            div {
+                @include flex(column, center, start);
+                gap: 2rem;
+
+                h6 {
+                    font-size: $tamanio-nav-footer;
+                }
+
+                ul {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+
+                    li {
+                        margin: 0.5rem 0;
+                        font-size: $tamanio-nav-footer;
+                    }
+                }
+            }
+        }
+
+    }
+}
