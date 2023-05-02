@@ -58,20 +58,40 @@ header nav #nav-right #nav-right-first {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 6rem;
+}
+header nav #nav-right #nav-right-first div {
+  height: 100%;
+}
+header nav #nav-right #nav-right-first div li {
+  list-style: none;
+  color: white;
+  font-size: 1.1rem;
+  display: inline-block;
 }
 header nav #nav-right #nav-right-first div a {
   text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
 }
-header nav #nav-right #nav-right-first div select {
-  border: none;
-  background-color: transparent;
-  color: white;
-  width: 2rem;
+header nav #nav-right #nav-right-first div svg {
+  cursor: pointer;
 }
-header nav #nav-right #nav-right-first div select option {
+header nav #nav-right #nav-right-first div div {
+  background-color: white;
+  height: auto;
+  margin-top: 1rem;
+  width: 10rem;
+  position: relative;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 6px;
+  display: none;
+}
+header nav #nav-right #nav-right-first div div a {
+  padding: 0.6rem;
   color: black;
+}
+header nav #nav-right #nav-right-first div div a:hover {
+  font-weight: 900;
 }
 header nav #nav-right #nav-right-second {
   width: 60%;
@@ -411,9 +431,9 @@ footer #footer-rigth div div ul li {
     height: auto;
     position: absolute;
     margin-top: 9rem;
-    height: 80%;
     border-radius: 20px;
     box-shadow: 0px 0px 16px 2px black;
+    padding: 2rem;
   }
   header nav #nav-right #nav-right-first {
     width: 100%;
@@ -421,23 +441,38 @@ footer #footer-rigth div div ul li {
     flex-direction: column;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2rem;
   }
   header nav #nav-right #nav-right-first div {
     padding: 1rem;
-    display: flex;
+    display: block;
+    width: 100%;
   }
-  header nav #nav-right #nav-right-first div a {
+  header nav #nav-right #nav-right-first div span {
     color: black;
     font-size: 2rem;
+    margin-right: 1rem;
   }
-  header nav #nav-right #nav-right-first div select {
+  header nav #nav-right #nav-right-first div svg path {
+    stroke: #ff545d;
+  }
+  header nav #nav-right #nav-right-first div div {
+    width: 100%;
+    place-content: center;
+    background-color: rgba(128, 128, 128, 0.2117647059);
+    border-radius: 20px;
+    gap: 2rem;
+  }
+  header nav #nav-right #nav-right-first div div a {
     color: black;
+    font-size: 1.8rem;
   }
   header nav #nav-right #nav-right-second {
     width: 100%;
     height: 40%;
     flex-direction: column;
     justify-content: space-evenly;
+    border-top: 1px solid black;
     gap: 0;
   }
   header nav #nav-right #nav-right-second a {
@@ -520,7 +555,7 @@ footer #footer-rigth div div ul li {
 }
 @media (max-width: 480px) {
   header {
-    height: 140vh;
+    height: 80vh;
     border-bottom-left-radius: 11rem;
   }
   header #header-main-text {
@@ -529,7 +564,7 @@ footer #footer-rigth div div ul li {
     width: 85%;
   }
   #designed-section {
-    height: 250vh;
+    height: 160vh;
     margin-top: 5rem;
     margin-bottom: 15rem;
   }
@@ -569,7 +604,7 @@ footer #footer-rigth div div ul li {
     line-height: 1.8rem;
   }
   #state-section {
-    height: 150vh;
+    height: 90vh;
     flex-direction: column;
     border-top-right-radius: 11rem;
     border-bottom-left-radius: 11rem;
@@ -601,14 +636,17 @@ footer #footer-rigth div div ul li {
     list-style: 2rem;
   }
   #free-section {
-    height: 200vh;
+    height: 130vh;
     flex-direction: column;
+    margin-top: 8rem;
   }
   #free-section #free-section-left {
     width: 100%;
     height: 30%;
     background-image: url(../imagenes/illustration-laptop-mobile.svg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40rem;
   }
   #free-section #free-section-left img {
     display: none;
@@ -630,7 +668,7 @@ footer #footer-rigth div div ul li {
     line-height: 1.8rem;
   }
   footer {
-    height: 200vh;
+    height: 120vh;
     flex-direction: column;
     border-top-right-radius: 11rem;
   }

@@ -1,6 +1,6 @@
 @media(max-width:480px) {
     header {
-        height: 140vh;
+        height: 80vh;
         border-bottom-left-radius: 11rem;
 
         #header-main-text {
@@ -11,7 +11,7 @@
     }
 
     #designed-section {
-        height: 250vh;
+        height: 160vh;
         margin-top: 5rem;
         margin-bottom: 15rem;
 
@@ -60,7 +60,7 @@
     }
 
     #state-section {
-        height: 150vh;
+        height: 90vh;
         flex-direction: column;
         border-top-right-radius: 11rem;
         border-bottom-left-radius: 11rem;
@@ -94,13 +94,16 @@
     }
 
     #free-section {
-        height: 200vh;
+        height: 130vh;
         flex-direction: column;
+        margin-top: 8rem;
 
         #free-section-left {
             @include tamanio(100%, 30%);
             background-image: url(../imagenes/illustration-laptop-mobile.svg);
             background-position: center;
+            background-repeat: no-repeat;
+            background-size: 40rem;
 
             img {
                 display: none;
@@ -128,7 +131,7 @@
     }
 
     footer {
-        height: 200vh;
+        height: 120vh;
         flex-direction: column;
         border-top-right-radius: 11rem;
 
